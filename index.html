@@ -7,12 +7,23 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
     <title>광고디자인</title>
+
+    <script language = "javascript">
+        var imgArray = new Array();
+
+        for(i=0;i <= 54; i++){
+            imgArray[i] = `img/${i+1}.png`;
+        }
+        
+        function showImage(){
+            var imgNum = Math.round(Math.random()*3);
+            var objImg = document.getElementById("introImg");
+            objImg.src = imgArray[imgNum];
+        }
+    </script>
 </head>
 <body>
-    <main>
-
-    </main>
-
+    <img id = "introImg">
 <script>
 </script>
 
