@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="kr">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,23 +9,22 @@
     <title>광고디자인</title>
 
     <script language = "javascript">
-        var imgArray = new Array();
-
-        for(i=0;i <= 54; i++){
-            imgArray[i] = `img/${i+1}.png`;
+        function makeRandom(min, max){
+            var RandVal = Math.floor(Math.random()*(max-min+1)) + min;
+            return RandVal;
         }
-        
-        function showImage(){
-            var imgNum = Math.round(Math.random()*3);
-            var objImg = document.getElementById("introImg");
-            objImg.src = imgArray[imgNum];
+        function toggleImg() {
+            var num = makeRandom(1,55)
+            document.getElementById("img").src = `./img/${num}.jpg`;
         }
     </script>
 </head>
 <body>
-    <img id = "introImg">
-<script>
-</script>
+    <main>
+        <img src="./img/bubble.svg" onclick="toggleImg()" alt="bubble" id="bubble">
+        <img src="./img/0.jpg" onclick="toggleImg()" id="img">
+        <img src="./img/name.svg" id="name">
+    </main>
 
 </body>
 </html>
